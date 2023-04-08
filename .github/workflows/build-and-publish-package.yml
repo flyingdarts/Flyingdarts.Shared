@@ -29,7 +29,7 @@ jobs:
           echo ::set-output name=shield::$(cat shield.json)
 
       - name: Publish to Shield.io
-        uses: JasonEtco/upload-to-release@v1
+        uses: JasonEtco/upload-to-release@v0.1.1
         with:
           args: |
             --tag-name "v${{ github.run_number }}" 
