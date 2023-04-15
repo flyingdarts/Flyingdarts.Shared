@@ -25,15 +25,4 @@ jobs:
       - name: Publish to NuGet.org
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: |
-          dotnet nuget push "bin/Release/Flyingdarts.Shared.*.nupkg" -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --skip-duplicate --json shield.json
-          echo ::set-output name=shield::$(cat shield.json)
-
-      - name: Publish to Shield.io
-        uses: JasonEtco/upload-to-release@v0.1.1
-        with:
-          args: |
-            --tag-name "v${{ github.run_number }}" 
-            --release-id "${{ github.event.repository.releases[0].id }}" 
-            --file "shield.json" 
-            --name "shield.json"
-            --content-type "application/json"
+          dotnet nuget push "bin/Release/Flyingdarts.Shared.*.nupkg" -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --skip-duplicate
