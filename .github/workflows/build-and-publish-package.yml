@@ -37,6 +37,6 @@ jobs:
           webhook-url: ${{ secrets.DISCORD_DEVELOPMENT_PACKAGES_CHANNEL_WEBHOOK }}
           content: Job completed
           embed-title: ${{ github.ref_name }}
-          embed-description: ${{ github.owner }} + $REPO_NAME_WITHOUT_DASHES
+          embed-description: ${{ github.owner }} ${{ env.REPO_NAME_WITHOUT_DASHES }}
           embed-footer-text: ${{ github.repository_owner }}
           embed-timestamp: ${{ github.event.head_commit.timestamp }}          
