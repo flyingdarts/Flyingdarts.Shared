@@ -1,11 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>Flyingdarts.Shared</Title>
-    <VersionPrefix>1.0.2.7</VersionPrefix>
+    <VersionPrefix>1.0.2.8</VersionPrefix>
     <Version>$(VersionPrefix)</Version>
     <PackageId>Flyingdarts.Shared</PackageId>
     <Authors>Flyingdarts</Authors>
@@ -19,7 +19,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.103.8" />
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.103.9" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.png">
